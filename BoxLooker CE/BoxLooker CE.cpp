@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "BoxLooker CE.h"
 #include "MainFrm.h"
-#include "DialogScrollable.h"
+#include "ConfigDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -75,35 +75,35 @@ BOOL CBoxLookerCEApp::InitInstance()
 // App command to run the dialog
 void CBoxLookerCEApp::OnAppAbout()
 {
-	CDialogScrollable aboutDlg = CDialogScrollable(IDD_ABOUT);
+	CDialog aboutDlg = CDialog(IDD_ABOUT);
 	aboutDlg.DoModal();
 }
 
 void CBoxLookerCEApp::OnAppGithub()
 {
-	CDialogScrollable githubDlg = CDialogScrollable(IDD_GITHUB);
+	CDialog githubDlg = CDialog(IDD_GITHUB);
 	githubDlg.DoModal();
 }
 
 void CBoxLookerCEApp::OnAppManual()
 {
-	CDialogScrollable manualDlg = CDialogScrollable(IDD_MANUAL);
+	CDialog manualDlg = CDialog(IDD_MANUAL);
 	manualDlg.DoModal();
 	}
 void CBoxLookerCEApp::OnPreferencesGrocyconnection()
 	{
-	CDialogScrollable grocyDlg = CDialogScrollable(IDD_GROCY);
+	CConfigDialog grocyDlg = CConfigDialog(IDD_GROCY);
 	grocyDlg.DoModal();
 	}
 
 void CBoxLookerCEApp::OnPreferencesApiconnection()
 	{
-	CDialogScrollable apiDlg = CDialogScrollable(IDD_API);
+	CConfigDialog apiDlg = CConfigDialog(IDD_API);
 	apiDlg.DoModal();
 	}
 
 void CBoxLookerCEApp::OnPreferencesMyfitnesspalconnection()
 	{
-	CDialogScrollable mfpDlg = CDialogScrollable(IDD_MFP);
+	CConfigDialog mfpDlg = CConfigDialog(IDD_MFP);
 	mfpDlg.DoModal();
 	}
