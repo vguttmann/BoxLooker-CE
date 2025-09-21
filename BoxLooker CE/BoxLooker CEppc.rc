@@ -88,6 +88,13 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ERROR               BITMAP                  "res\\bitmap1.bmp"
 #endif    // German (Germany) resources
 /////////////////////////////////////////////////////////////////////////////
 
@@ -103,12 +110,189 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// Dialog
+//
+
+IDD_ABOUT DIALOG  0, 0, 156, 129
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "About BoxLooker CE"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC_1,12,12,20,20,SS_REALSIZEIMAGE
+    LTEXT           "BoxLooker CE Version 1.0",IDC_STATIC_2,12,36,113,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2025",IDC_STATIC_3,12,48,66,8
+END
+
+IDD_GITHUB DIALOG  0, 0, 156, 129
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "Github"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC_1,12,12,20,20,SS_REALSIZEIMAGE
+    LTEXT           "BoxLooker CE Github",IDC_STATIC_2,12,36,104,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2025",IDC_STATIC_3,12,48,66,8
+END
+
+IDD_MANUAL DIALOG  0, 0, 156, 129
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "Manual"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC_1,12,12,20,20,SS_REALSIZEIMAGE
+    LTEXT           "BoxLooker CE Manual",IDC_STATIC_2,12,36,90,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2025",IDC_STATIC_3,12,48,66,8
+END
+
+IDD_MFP DIALOG  0, 0, 161, 166
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "MyFitnessPal Connection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         146,IDC_IMG_SV_ADD,"Static",SS_BITMAP | NOT WS_VISIBLE,141,32,11,10
+    CONTROL         146,IDC_IMG_SV_PT,"Static",SS_BITMAP | NOT WS_VISIBLE,141,54,11,10
+    CONTROL         146,IDC_IMG_SV_KEY,"Static",SS_BITMAP | NOT WS_VISIBLE,141,76,11,10
+    EDITTEXT        IDC_MFP_SV_ADD,60,30,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MFP_SV_PT,60,52,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MFP_SV_KEY,60,74,93,14,ES_AUTOHSCROLL
+    RTEXT           "Server Address: ",IDC_GR_SERVER_TEXT,0,30,60,14
+    RTEXT           "Server Port: ",IDC_GR_SERVER_TEXT2,0,52,60,14
+    RTEXT           "API Key: ",IDC_GR_SERVER_TEXT3,0,74,60,14
+    LTEXT           "MyFitnessPal Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
+END
+
+IDD_GROCY DIALOG  0, 0, 161, 166
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "Grocy API Connection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         146,IDC_IMG_SV_ADD,"Static",SS_BITMAP | NOT WS_VISIBLE,141,32,11,10
+    CONTROL         146,IDC_IMG_SV_PT,"Static",SS_BITMAP | NOT WS_VISIBLE,141,54,11,10
+    CONTROL         146,IDC_IMG_SV_KEY,"Static",SS_BITMAP | NOT WS_VISIBLE,141,76,11,10
+    EDITTEXT        IDC_GR_SV_ADD,60,30,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GR_SV_PT,60,52,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GR_SV_KEY,60,74,93,14,ES_AUTOHSCROLL
+    RTEXT           "Server Address: ",IDC_GR_SERVER_TEXT,0,30,60,14
+    RTEXT           "Server Port: ",IDC_GR_SERVER_TEXT2,0,52,60,14
+    RTEXT           "API Key: ",IDC_GR_SERVER_TEXT3,0,74,60,14
+    LTEXT           "Grocy APi Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
+END
+
+IDD_API DIALOG  0, 0, 161, 166
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "Grocy API Connection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         146,IDC_IMG_SV_ADD,"Static",SS_BITMAP | NOT WS_VISIBLE,141,32,11,10
+    CONTROL         146,IDC_IMG_SV_PT,"Static",SS_BITMAP | NOT WS_VISIBLE,141,54,11,10
+    CONTROL         146,IDC_IMG_SV_KEY,"Static",SS_BITMAP | NOT WS_VISIBLE,141,76,11,10
+    EDITTEXT        IDC_API_SV_ADD,60,30,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_API_SV_PT,60,52,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_API_SV_KEY,60,74,93,14,ES_AUTOHSCROLL
+    RTEXT           "Server Address: ",IDC_GR_SERVER_TEXT,0,30,60,14
+    RTEXT           "Server Port: ",IDC_GR_SERVER_TEXT2,0,52,60,14
+    RTEXT           "API Key: ",IDC_GR_SERVER_TEXT3,0,74,60,14
+    LTEXT           "BoxLooker API Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_GITHUB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_MANUAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_MFP, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 60
+        VERTGUIDE, 153
+        HORZGUIDE, 4
+        HORZGUIDE, 14
+        HORZGUIDE, 30
+        HORZGUIDE, 44
+        HORZGUIDE, 52
+        HORZGUIDE, 66
+        HORZGUIDE, 74
+        HORZGUIDE, 88
+        HORZGUIDE, 94
+    END
+
+    IDD_GROCY, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 60
+        VERTGUIDE, 153
+        HORZGUIDE, 4
+        HORZGUIDE, 14
+        HORZGUIDE, 30
+        HORZGUIDE, 44
+        HORZGUIDE, 52
+        HORZGUIDE, 66
+        HORZGUIDE, 74
+        HORZGUIDE, 88
+        HORZGUIDE, 94
+    END
+
+    IDD_API, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 60
+        VERTGUIDE, 153
+        HORZGUIDE, 4
+        HORZGUIDE, 14
+        HORZGUIDE, 30
+        HORZGUIDE, 44
+        HORZGUIDE, 52
+        HORZGUIDE, 66
+        HORZGUIDE, 74
+        HORZGUIDE, 88
+        HORZGUIDE, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // Icon
 //
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\BoxLooker CE.ico"
+IDI_ERROR               ICON                    "res\\error.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -160,90 +344,6 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// Dialog
-//
-
-IDD_ABOUT DIALOG  0, 0, 156, 129
-STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
-EXSTYLE 0x80000000L
-CAPTION "About BoxLooker CE"
-FONT 8, "MS Sans Serif"
-BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC_1,12,12,20,20,SS_REALSIZEIMAGE
-    LTEXT           "BoxLooker CE Version 1.0",IDC_STATIC_2,12,36,113,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2025",IDC_STATIC_3,12,48,66,8
-END
-
-IDD_GITHUB DIALOG  0, 0, 156, 129
-STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
-EXSTYLE 0x80000000L
-CAPTION "Github"
-FONT 8, "MS Sans Serif"
-BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC_1,12,12,20,20,SS_REALSIZEIMAGE
-    LTEXT           "BoxLooker CE Github",IDC_STATIC_2,12,36,104,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2025",IDC_STATIC_3,12,48,66,8
-END
-
-IDD_MANUAL DIALOG  0, 0, 156, 129
-STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
-EXSTYLE 0x80000000L
-CAPTION "Manual"
-FONT 8, "MS Sans Serif"
-BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC_1,12,12,20,20,SS_REALSIZEIMAGE
-    LTEXT           "BoxLooker CE Manual",IDC_STATIC_2,12,36,90,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2025",IDC_STATIC_3,12,48,66,8
-END
-
-IDD_GROCY DIALOG  0, 0, 161, 166
-STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-EXSTYLE 0x80000000L
-CAPTION "Grocy Connection"
-FONT 8, "MS Sans Serif"
-BEGIN
-    EDITTEXT        IDC_GR_SV_ADD,60,30,93,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_GR_SV_PT,60,52,93,14,ES_AUTOHSCROLL | ES_NUMBER
-    EDITTEXT        IDC_GR_SV_KEY,60,74,93,14,ES_AUTOHSCROLL
-    RTEXT           "Server Address: ",IDC_GR_SERVER_TEXT,0,30,60,14
-    RTEXT           "Server Port: ",IDC_GR_SERVER_TEXT2,0,52,60,14
-    RTEXT           "API Key: ",IDC_GR_SERVER_TEXT3,0,74,60,14
-    LTEXT           "Grocy API Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
-END
-
-IDD_MFP DIALOG  0, 0, 161, 166
-STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-EXSTYLE 0x80000000L
-CAPTION "MyFitnessPal Connection"
-FONT 8, "MS Sans Serif"
-BEGIN
-    EDITTEXT        IDC_MFP_SV_ADD,60,30,93,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_MFP_SV_PT,60,52,93,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_MFP_SV_KEY,60,74,93,14,ES_AUTOHSCROLL
-    RTEXT           "Server Address: ",IDC_GR_SERVER_TEXT,0,30,60,14
-    RTEXT           "Server Port: ",IDC_GR_SERVER_TEXT2,0,52,60,14
-    RTEXT           "API Key: ",IDC_GR_SERVER_TEXT3,0,74,60,14
-    LTEXT           "MyFitnessPal Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
-END
-
-IDD_API DIALOG  0, 0, 161, 166
-STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-EXSTYLE 0x80000000L
-CAPTION "API Connection"
-FONT 8, "MS Sans Serif"
-BEGIN
-    EDITTEXT        IDC_API_SV_ADD,60,30,93,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_API_SV_PT,60,52,93,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_API_SV_KEY,60,74,93,14,ES_AUTOHSCROLL
-    RTEXT           "Server Address: ",IDC_GR_SERVER_TEXT,0,30,60,14
-    RTEXT           "Server Port: ",IDC_GR_SERVER_TEXT2,0,52,60,14
-    RTEXT           "API Key: ",IDC_GR_SERVER_TEXT3,0,74,60,14
-    LTEXT           "API Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
-END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // Version
 //
 
@@ -279,86 +379,6 @@ BEGIN
         VALUE "Translation", 0x409, 1252
     END
 END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// DESIGNINFO
-//
-
-#ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
-BEGIN
-    IDD_ABOUT, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 149
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 122
-    END
-
-    IDD_GITHUB, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 149
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 122
-    END
-
-    IDD_MANUAL, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 149
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 122
-    END
-
-    IDD_GROCY, DIALOG
-    BEGIN
-        VERTGUIDE, 8
-        VERTGUIDE, 60
-        VERTGUIDE, 153
-        HORZGUIDE, 4
-        HORZGUIDE, 30
-        HORZGUIDE, 44
-        HORZGUIDE, 52
-        HORZGUIDE, 66
-        HORZGUIDE, 74
-        HORZGUIDE, 88
-        HORZGUIDE, 96
-    END
-
-    IDD_MFP, DIALOG
-    BEGIN
-        VERTGUIDE, 8
-        VERTGUIDE, 60
-        VERTGUIDE, 153
-        HORZGUIDE, 4
-        HORZGUIDE, 30
-        HORZGUIDE, 44
-        HORZGUIDE, 52
-        HORZGUIDE, 66
-        HORZGUIDE, 74
-        HORZGUIDE, 88
-        HORZGUIDE, 96
-    END
-
-    IDD_API, DIALOG
-    BEGIN
-        VERTGUIDE, 8
-        VERTGUIDE, 60
-        VERTGUIDE, 153
-        HORZGUIDE, 4
-        HORZGUIDE, 30
-        HORZGUIDE, 44
-        HORZGUIDE, 52
-        HORZGUIDE, 66
-        HORZGUIDE, 74
-        HORZGUIDE, 88
-        HORZGUIDE, 96
-    END
-END
-#endif    // APSTUDIO_INVOKED
 
 
 /////////////////////////////////////////////////////////////////////////////

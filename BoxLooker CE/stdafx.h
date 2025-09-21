@@ -69,3 +69,4 @@
 #endif
 
 #include <altcecrt.h>
+#include <afxdhtml.h>

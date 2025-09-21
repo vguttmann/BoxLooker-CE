@@ -27,6 +27,56 @@ CConfigDialog::~CConfigDialog()
 	{
 	}
 
+BOOL CConfigDialog::PreTranslateMessage(MSG* pMsg)
+	{
+
+	switch (pMsg->message)
+		{
+		case WM_KEYDOWN:
+			if (pMsg->wParam == VK_SHIFT)
+				{
+				m_bShiftDown = true;
+				}
+			else if (pMsg->wParam == VK_RETURN)
+				{
+				CWnd* pWnd = GetFocus();
+				if (pWnd)
+					{
+					CWnd* pNext = GetNextDlgTabItem(pWnd, m_bShiftJustReleased);
+					if (pNext && pNext != pWnd)
+						{
+						pNext->SetFocus();
+
+						CEdit* pEdit = (CEdit*)CEdit::FromHandle(pNext->GetSafeHwnd());
+						if (pEdit)
+							{
+							TRACE0("EDIT");
+							pEdit->SetSel(0, -1);// Select all text
+							} else {TRACE0("No Edit");}
+							m_bShiftJustReleased = false;
+						return TRUE; // Eat Enter
+						}
+					}
+				m_bShiftJustReleased = false;
+				return TRUE;
+				}
+			else {
+				m_bShiftJustReleased = false;
+				}
+			break;
+
+		case WM_KEYUP:
+			if (pMsg->wParam == VK_SHIFT)
+				{
+				m_bShiftDown = false;
+				m_bShiftJustReleased = true;
+				}
+			break;
+		}
+
+	return CDialog::PreTranslateMessage(pMsg); // Default handling
+	}
+
 std::vector<UINT> CConfigDialog::GetAllEditControls()
 	{
 	std::vector<UINT> editIDs;
@@ -79,6 +129,7 @@ BOOL CConfigDialog::OnInitDialog()
 		pHeader->SetFont(&m_HeaderFont);
 
 
+
 	std::vector<UINT> editControls = GetAllEditControls();
 
 	for(size_t i = 0; i < editControls.size(); i++){
@@ -96,7 +147,6 @@ BOOL CConfigDialog::OnInitDialog()
 		}
 	m_wndCommandBar.SetBarStyle(m_wndCommandBar.GetBarStyle() | CBRS_SIZE_FIXED);
 
-
 	return TRUE;
 	}
 
@@ -109,6 +159,15 @@ void CConfigDialog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CConfigDialog, CDialog)
 	ON_COMMAND(ID_SAVE, &CConfigDialog::OnSave)
 	ON_COMMAND(ID_DISCARD, &CConfigDialog::OnDiscard)
+	ON_EN_KILLFOCUS(IDC_MFP_SV_ADD, &CConfigDialog::OnEnKillfocusMfpSvAdd)
+	ON_EN_KILLFOCUS(IDC_MFP_SV_PT, &CConfigDialog::OnEnKillfocusMfpSvPt)
+	ON_EN_KILLFOCUS(IDC_MFP_SV_KEY, &CConfigDialog::OnEnKillfocusMfpSvKey)
+	ON_EN_KILLFOCUS(IDC_GR_SV_ADD, &CConfigDialog::OnEnKillfocusGrSvAdd)
+	ON_EN_KILLFOCUS(IDC_GR_SV_PT, &CConfigDialog::OnEnKillfocusGrSvPt)
+	ON_EN_KILLFOCUS(IDC_GR_SV_KEY, &CConfigDialog::OnEnKillfocusGrSvKey)
+	ON_EN_KILLFOCUS(IDC_API_SV_ADD, &CConfigDialog::OnEnKillfocusApiSvAdd)
+	ON_EN_KILLFOCUS(IDC_API_SV_PT, &CConfigDialog::OnEnKillfocusApiSvPt)
+	ON_EN_KILLFOCUS(IDC_API_SV_KEY, &CConfigDialog::OnEnKillfocusApiSvKey)
 END_MESSAGE_MAP()
 
 void CConfigDialog::OnSave()
@@ -134,3 +193,48 @@ void CConfigDialog::OnDiscard()
 	}
 
 // CConfigDialog message handlers
+
+void CConfigDialog::OnEnKillfocusMfpSvAdd()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusMfpSvPt()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusMfpSvKey()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusGrSvAdd()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusGrSvPt()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusGrSvKey()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusApiSvAdd()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusApiSvPt()
+	{
+	// TODO: Add your control notification handler code here
+	}
+
+void CConfigDialog::OnEnKillfocusApiSvKey()
+	{
+	// TODO: Add your control notification handler code here
+	}

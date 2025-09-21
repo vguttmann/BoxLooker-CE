@@ -6,14 +6,23 @@
 #define IDD_ABOUT                       100
 #define IDD_GITHUB                      103
 #define IDD_MANUAL                      104
-#define IDD_GROCY                       109
 #define IDD_MFP                         111
-#define IDD_API                         112
 #define IDD_CONFIGDIALOG                113
+#define IDD_GROCY                       114
+#define IDD_WARNINGICON                 115
+#define IDD_GROCY1                      115
+#define IDD_API                         115
 #define IDR_MAINFRAME                   128
 #define IDR_BoxLookerCETYPE             129
 #define IDR_MAINMENUBAR                 132
 #define IDR_CONFIGMENU                  134
+#define IDB_PNG1                        137
+#define IDB_PNG2                        138
+#define IDB_PNG3                        139
+#define IDI_errofr                      140
+#define IDI_ERROR                       141
+#define IDB_BITMAP1                     146
+#define IDB_ERROR                       146
 #define IDC_STATIC_1                    201
 #define IDC_STATIC_2                    202
 #define IDC_STATIC_3                    203
@@ -21,19 +30,25 @@
 #define IDS_MENU                        302
 #define IDM_NEW                         401
 #define IDM_MENU                        402
-#define IDC_API_SV_ADD                  1004
 #define IDC_GR_SERVER_TEXT              1005
 #define IDC_DIALOG_TITLE                1006
-#define IDC_API_SV_PT                   1007
 #define IDC_GR_SERVER_TEXT2             1008
 #define IDC_GR_SERVER_TEXT3             1009
-#define IDC_API_SV_KEY                  1010
-#define IDC_GR_SV_ADD                   1013
-#define IDC_GR_SV_PT                    1014
-#define IDC_GR_SV_KEY                   1015
 #define IDC_MFP_SV_ADD                  1016
 #define IDC_MFP_SV_PT                   1020
 #define IDC_MFP_SV_KEY                  1021
+#define IDC_IMG_SV_ADD                  1027
+#define IDC_IMG_SV_PT                   1028
+#define IDC_IMG_SV_KEY                  1029
+#define IDC_IMG_SV_ADD2                 1031
+#define IDC_CUSTOM3                     1033
+#define IDC_CUSTOM1                     1034
+#define IDC_GR_SV_ADD                   1038
+#define IDC_GR_SV_PT                    1039
+#define IDC_GR_SV_KEY                   1040
+#define IDC_API_SV_ADD                  1041
+#define IDC_API_SV_PT                   1042
+#define IDC_API_SV_KEY                  1043
 #define ID_MENU_ABOUT                   32772
 #define ID_PREFERENCES_GROCYCONNECTION  32774
 #define ID_PREFERENCES_APICONNECTION    32775
@@ -56,9 +71,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        135
+#define _APS_NEXT_RESOURCE_VALUE        147
 #define _APS_NEXT_COMMAND_VALUE         32792
-#define _APS_NEXT_CONTROL_VALUE         1022
-#define _APS_NEXT_SYMED_VALUE           114
+#define _APS_NEXT_CONTROL_VALUE         1044
+#define _APS_NEXT_SYMED_VALUE           116
 #endif
 #endif
