@@ -10,8 +10,8 @@
 #define IDD_CONFIGDIALOG                113
 #define IDD_GROCY                       114
 #define IDD_WARNINGICON                 115
-#define IDD_GROCY1                      115
 #define IDD_API                         115
+#define IDD_CONSUME                     116
 #define IDR_MAINFRAME                   128
 #define IDR_BoxLookerCETYPE             129
 #define IDR_MAINMENUBAR                 132
@@ -49,6 +49,9 @@
 #define IDC_API_SV_ADD                  1041
 #define IDC_API_SV_PT                   1042
 #define IDC_API_SV_KEY                  1043
+#define IDC_BUTTON1                     1044
+#define IDC_CON_EAN_GO                  1044
+#define IDC_CON_EAN                     1045
 #define ID_MENU_ABOUT                   32772
 #define ID_PREFERENCES_GROCYCONNECTION  32774
 #define ID_PREFERENCES_APICONNECTION    32775
@@ -73,7 +76,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        147
 #define _APS_NEXT_COMMAND_VALUE         32792
-#define _APS_NEXT_CONTROL_VALUE         1044
+#define _APS_NEXT_CONTROL_VALUE         1046
 #define _APS_NEXT_SYMED_VALUE           116
 #endif
 #endif

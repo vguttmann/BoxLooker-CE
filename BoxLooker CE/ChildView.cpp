@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "BoxLooker CE.h"
 #include "ChildView.h"
+#include "ConsumeDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -13,12 +14,12 @@
 // CChildView
 
 CChildView::CChildView()
-{
-}
+	{
+	}
 
 CChildView::~CChildView()
-{
-}
+	{
+	}
 
 
 BEGIN_MESSAGE_MAP(CChildView, CWnd)
@@ -38,7 +39,7 @@ END_MESSAGE_MAP()
 // CChildView message handlers
 
 BOOL CChildView::PreCreateWindow(CREATESTRUCT& cs) 
-{
+	{
 	if (!CWnd::PreCreateWindow(cs))
 		return FALSE;
 	m_nMode = 1;
@@ -47,18 +48,22 @@ BOOL CChildView::PreCreateWindow(CREATESTRUCT& cs)
 		::LoadCursor(NULL, IDC_ARROW), reinterpret_cast<HBRUSH>(COLOR_WINDOW+1), NULL);
 
 	return TRUE;
-}
+	}
 
 void CChildView::OnPaint() 
-{
+	{
 	CPaintDC dc (this);
 	CRect rect;
 
 	GetClientRect (&rect);
 
-	dc.DrawText (_T("Hello World!"), -1 , &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
-
-}
+	if(m_nMode == 2){
+		CConsumeDialog* consumeDlg = new CConsumeDialog(GetParentFrame());
+		consumeDlg->Create(IDD_CONSUME, this);
+		} else {
+			dc.DrawText (_T("Hello World!"), -1 , &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+		}
+	}
 
 void CChildView::OnUpdateApplicationConsumptionmode(CCmdUI *pCmdUI)
 	{

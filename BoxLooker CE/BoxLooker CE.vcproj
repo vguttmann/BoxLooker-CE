@@ -391,6 +391,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ConsumeDialog.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MainFrm.cpp"
 				>
 			</File>
@@ -446,6 +450,10 @@
 			</File>
 			<File
 				RelativePath=".\ConfigDialog.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ConsumeDialog.h"
 				>
 			</File>
 			<File

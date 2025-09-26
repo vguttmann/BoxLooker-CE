@@ -200,6 +200,18 @@ BEGIN
     LTEXT           "BoxLooker API Connection",IDC_DIALOG_TITLE,8,4,145,14,NOT WS_GROUP
 END
 
+IDD_CONSUME DIALOG  0, 0, 161, 166
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "Grocy API Connection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         146,IDC_IMG_SV_PT,"Static",SS_BITMAP | NOT WS_VISIBLE,141,54,11,10
+    EDITTEXT        IDC_CON_EAN,11,52,89,14,ES_AUTOHSCROLL
+    LTEXT           "Consumption Mode",IDC_DIALOG_TITLE,10,4,90,14,NOT WS_GROUP
+    PUSHBUTTON      "Go!",IDC_CON_EAN_GO,111,52,41,14
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -270,6 +282,24 @@ BEGIN
         VERTGUIDE, 8
         VERTGUIDE, 60
         VERTGUIDE, 153
+        HORZGUIDE, 4
+        HORZGUIDE, 14
+        HORZGUIDE, 30
+        HORZGUIDE, 44
+        HORZGUIDE, 52
+        HORZGUIDE, 66
+        HORZGUIDE, 74
+        HORZGUIDE, 88
+        HORZGUIDE, 94
+    END
+
+    IDD_CONSUME, DIALOG
+    BEGIN
+        VERTGUIDE, 10
+        VERTGUIDE, 11
+        VERTGUIDE, 100
+        VERTGUIDE, 111
+        VERTGUIDE, 152
         HORZGUIDE, 4
         HORZGUIDE, 14
         HORZGUIDE, 30
